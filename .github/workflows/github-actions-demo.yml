@@ -15,3 +15,16 @@ jobs:
               run: |
                   ls ${{ github.workspace }}
             - run: echo "🍏 This job's status is ${{ job.status }}."
+    My-Test:
+        name: "this is my test"
+        runs-on: ubuntu-latest
+        env:
+            name: "meng"
+            age: 18
+            dir: "./src/"
+        steps:
+            - name: first test
+              working-directory: ${{ env.dir }}
+              run: node index.js
+            - name: second test
+              run: echo "my name is ${{env.name}}, and age is ${{env.age}}"
