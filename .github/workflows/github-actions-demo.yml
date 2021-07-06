@@ -21,15 +21,14 @@ jobs:
         env:
             name: "meng"
             age: 18
-            dir: "./src/"
+            dir: "./src"
         steps:
             - name: Use Node.js
               uses: actions/setup-node@v1
               with:
-                node-version: '12.x'
+                  node-version: "12.x"
             - name: second test
               run: echo "my name is ${{env.name}}, and age is ${{env.age}}"
             - name: first test
               working-directory: ${{ env.dir }}
-              run: ls -al
-           
+              run: node index.js
