@@ -25,6 +25,6 @@ jobs:
         steps:
             - name: first test
               working-directory: ${{ env.dir }}
-              run: node index.js
+              run: ls -al
             - name: second test
               run: echo "my name is ${{env.name}}, and age is ${{env.age}}"
