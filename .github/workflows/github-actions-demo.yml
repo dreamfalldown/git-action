@@ -32,4 +32,4 @@ jobs:
               run: echo "my name is ${{env.name}}, and age is ${{env.age}}"
             - name: first test
               working-directory: ${{ env.dir }}
-              run: node ./src/index.js
+              run: node index.js
