@@ -33,7 +33,8 @@ jobs:
             - name: first test
               working-directory: ${{ env.dir }}
               run: node index.js
+              env:
+                  dev: "hahah"
+                  CI: false
+            - name: last
               run: echo ${{secrets.password}}
-              env: 
-                dev: 'hahah'
-                CI: false
